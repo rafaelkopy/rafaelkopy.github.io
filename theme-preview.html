@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Preview - Secure Mail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <style>
+    .preview-container {
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .preview-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .preview-header h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .preview-header p {
+      color: var(--color-text-secondary);
+      font-size: 16px;
+    }
+
+    .theme-showcase {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .showcase-section {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .showcase-section h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--color-primary);
+    }
+
+    .color-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .color-swatch {
+      text-align: center;
+    }
+
+    .color-box {
+      width: 100%;
+      height: 80px;
+      border-radius: var(--radius-md);
+      margin-bottom: 8px;
+      border: 1px solid var(--color-border);
+    }
+
+    .color-label {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      font-family: var(--font-mono);
+    }
+
+    .component-demo {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .demo-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .quick-theme-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+    }
+
+    .quick-theme-switcher h3 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .quick-theme-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .quick-theme-btn {
+      padding: 8px 16px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+      cursor: pointer;
+      font-size: 20px;
+      transition: all var(--transition-fast);
+    }
+
+    .quick-theme-btn:hover {
+      background: var(--color-surface-hover);
+      border-color: var(--color-primary);
+      transform: scale(1.1);
+    }
+
+    .quick-theme-btn.active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="quick-theme-switcher">
+    <h3>Quick Switch</h3>
+    <div class="quick-theme-buttons">
+      <button class="quick-theme-btn" data-theme="darkmode" title="Dark Mode">🌙</button>
+      <button class="quick-theme-btn" data-theme="bright" title="Bright Mode">☀️</button>
+      <button class="quick-theme-btn" data-theme="oldschool" title="Old School">🖥️</button>
+    </div>
+  </div>
+
+  <div class="preview-container">
+    <div class="preview-header">
+      <h1>Theme System Preview</h1>
+      <p>Three carefully crafted themes for the Secure Mail interface</p>
+    </div>
+
+    <div class="theme-showcase">
+      <!-- Color Palette -->
+      <div class="showcase-section">
+        <h2>Color Palette</h2>
+        <div class="color-swatches">
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-bg);"></div>
+            <div class="color-label">Background</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-surface);"></div>
+            <div class="color-label">Surface</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-primary);"></div>
+            <div class="color-label">Primary</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-accent);"></div>
+            <div class="color-label">Accent</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-success);"></div>
+            <div class="color-label">Success</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-danger);"></div>
+            <div class="color-label">Danger</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-text);"></div>
+            <div class="color-label">Text</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: var(--color-border);"></div>
+            <div class="color-label">Border</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="showcase-section">
+        <h2>Typography</h2>
+        <div style="margin-top: 16px;">
+          <h1 style="font-size: 32px; margin-bottom: 8px;">Heading 1 - The Quick Brown Fox</h1>
+          <h2 style="font-size: 24px; margin-bottom: 8px;">Heading 2 - The Quick Brown Fox</h2>
+          <h3 style="font-size: 18px; margin-bottom: 8px;">Heading 3 - The Quick Brown Fox</h3>
+          <p style="font-size: 16px; margin-bottom: 8px;">Body text - The quick brown fox jumps over the lazy dog. This is regular paragraph text with standard styling.</p>
+          <p style="font-size: 14px; color: var(--color-text-secondary);">Secondary text - Additional information displayed in a muted color for visual hierarchy.</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="showcase-section">
+        <h2>Buttons & Interactive Elements</h2>
+        <div class="component-demo">
+          <div class="demo-row">
+            <button class="btn-primary">Primary Button</button>
+            <button class="btn-back">Back Button</button>
+            <button class="btn-primary" disabled>Disabled Button</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Inputs -->
+      <div class="showcase-section">
+        <h2>Form Elements</h2>
+        <div class="component-demo">
+          <div class="input-group">
+            <label for="preview-input-1">Username</label>
+            <input type="text" id="preview-input-1" value="agent" placeholder="Enter username">
+          </div>
+          <div class="input-group">
+            <label for="preview-input-2">Password</label>
+            <input type="password" id="preview-input-2" placeholder="Enter password">
+          </div>
+        </div>
+      </div>
+
+      <!-- Email List Sample -->
+      <div class="showcase-section">
+        <h2>Email List Items</h2>
+        <div style="margin-top: 16px;">
+          <div class="email-row unread">
+            <div class="unread-dot"></div>
+            <div class="email-content">
+              <div class="email-from">Director</div>
+              <div class="email-subject">URGENT: Mission Briefing</div>
+            </div>
+            <div class="email-date">08:00</div>
+          </div>
+          <div class="email-row">
+            <div class="unread-dot"></div>
+            <div class="email-content">
+              <div class="email-from">IT Support</div>
+              <div class="email-subject">System Maintenance Notice</div>
+            </div>
+            <div class="email-date">14:15</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards & Surfaces -->
+      <div class="showcase-section">
+        <h2>Cards & Surfaces</h2>
+        <div style="margin-top: 16px; display: grid; gap: 16px;">
+          <div style="background: var(--color-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h3 style="margin-bottom: 8px;">Card Title</h3>
+            <p style="color: var(--color-text-secondary); font-size: 14px;">This is a card component demonstrating surface styling with proper elevation and borders.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges & Labels -->
+      <div class="showcase-section">
+        <h2>Badges & Status Indicators</h2>
+        <div class="demo-row" style="margin-top: 16px;">
+          <span class="nav-badge visible">3</span>
+          <span style="background: var(--color-success); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">Success</span>
+          <span style="background: var(--color-danger); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">Error</span>
+          <span style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">Info</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script>
+    // Add click handlers for quick theme buttons
+    document.querySelectorAll('.quick-theme-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var theme = this.dataset.theme;
+        if (window.EscapeRoom && window.EscapeRoom.theme) {
+          window.EscapeRoom.theme.apply(theme);
+        }
+        updateQuickButtons();
+      });
+    });
+
+    function updateQuickButtons() {
+      var current = window.EscapeRoom.theme.getCurrent();
+      document.querySelectorAll('.quick-theme-btn').forEach(function(btn) {
+        if (btn.dataset.theme === current) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Update buttons on theme change
+    document.addEventListener('theme-changed', updateQuickButtons);
+
+    // Initial update
+    setTimeout(updateQuickButtons, 100);
+  </script>
+</body>
+</html>

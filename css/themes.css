@@ -1,0 +1,388 @@
+/* ============================================
+   Theme System Styles
+   ============================================ */
+
+/* Theme Selector in Sidebar */
+.theme-selector {
+  padding: 16px 12px;
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+}
+
+.theme-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.theme-selector-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+}
+
+.theme-toggle-quick {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-quick:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.theme-toggle-quick:active {
+  transform: scale(0.95);
+}
+
+.theme-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.theme-button:hover {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+.theme-button.active {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+  border-width: 2px;
+  padding: 9px 11px;
+}
+
+.theme-button .theme-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.theme-button .theme-name {
+  flex: 1;
+}
+
+/* ============================================
+   Theme-Specific Overrides
+   ============================================ */
+
+/* Bright Theme Adjustments */
+body.theme-bright {
+  /* Add subtle gradient to login background */
+}
+
+body.theme-bright #screen-login {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 50%, #e8eaf6 100%);
+}
+
+body.theme-bright #screen-login::before {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 150, 199, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 180, 216, 0.06) 0%, transparent 50%);
+}
+
+body.theme-bright .login-card {
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-bright .input-group input {
+  background: #f8f9fa;
+}
+
+body.theme-bright .btn-primary {
+  box-shadow: 0 2px 8px rgba(0, 150, 199, 0.25);
+}
+
+body.theme-bright .btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(0, 150, 199, 0.35);
+}
+
+/* Old School Theme Adjustments */
+body.theme-oldschool {
+  /* CRT monitor effect */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+body.theme-oldschool * {
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+/* CRT scan line effect */
+body.theme-oldschool::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+/* CRT glow effect */
+body.theme-oldschool #screen-login {
+  background: #000;
+  position: relative;
+}
+
+body.theme-oldschool #screen-login::before {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(0, 255, 0, 0.03) 0%, transparent 70%);
+}
+
+/* Terminal-style borders */
+body.theme-oldschool .login-card,
+body.theme-oldschool .sidebar,
+body.theme-oldschool .email-row,
+body.theme-oldschool .input-group input,
+body.theme-oldschool .btn-primary,
+body.theme-oldschool .btn-back,
+body.theme-oldschool .theme-button,
+body.theme-oldschool .map-container,
+body.theme-oldschool .bottom-sheet {
+  border-width: 2px;
+  border-style: solid;
+}
+
+body.theme-oldschool .login-card {
+  box-shadow:
+    0 0 20px rgba(0, 255, 0, 0.3),
+    inset 0 0 20px rgba(0, 255, 0, 0.05);
+}
+
+/* Text glow effect */
+body.theme-oldschool .login-card h1,
+body.theme-oldschool .app-name,
+body.theme-oldschool .detail-subject,
+body.theme-oldschool .email-subject {
+  text-shadow: 0 0 8px currentColor;
+}
+
+body.theme-oldschool .btn-primary,
+body.theme-oldschool .btn-confirm {
+  background: transparent;
+  box-shadow:
+    0 0 10px var(--color-primary),
+    inset 0 0 10px rgba(0, 255, 0, 0.1);
+  text-shadow: 0 0 8px var(--color-primary);
+}
+
+body.theme-oldschool .btn-primary:hover,
+body.theme-oldschool .btn-confirm:hover {
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow:
+    0 0 20px var(--color-primary),
+    inset 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+/* Blinking cursor effect for inputs */
+body.theme-oldschool .input-group input:focus {
+  box-shadow: 0 0 10px var(--color-primary);
+  animation: input-blink 1s step-end infinite;
+}
+
+@keyframes input-blink {
+  0%, 50% { border-color: var(--color-primary); }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Retro rounded corners - less rounded for old school look */
+body.theme-oldschool .login-card,
+body.theme-oldschool .btn-primary,
+body.theme-oldschool .btn-back,
+body.theme-oldschool .btn-confirm,
+body.theme-oldschool .input-group input,
+body.theme-oldschool .map-container {
+  border-radius: 0;
+}
+
+body.theme-oldschool .nav-item,
+body.theme-oldschool .theme-button,
+body.theme-oldschool .account-avatar,
+body.theme-oldschool .detail-avatar {
+  border-radius: 3px;
+}
+
+/* Matrix-style background animation for login */
+body.theme-oldschool #screen-login::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(transparent 50%, rgba(0, 255, 0, 0.02) 50%);
+  background-size: 100% 4px;
+  animation: matrix-scroll 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrix-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+/* Pixel-perfect unread dot */
+body.theme-oldschool .unread-dot {
+  border-radius: 0;
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 6px var(--color-unread);
+}
+
+/* ASCII-style icons */
+body.theme-oldschool .login-icon {
+  font-family: var(--font-mono);
+  filter: none;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Phosphor glow on hover */
+body.theme-oldschool .email-row:hover,
+body.theme-oldschool .nav-item:hover,
+body.theme-oldschool .theme-button:hover {
+  background: rgba(0, 255, 0, 0.05);
+  box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+body.theme-oldschool .email-row.unread {
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+/* Terminal-style scrollbar */
+body.theme-oldschool ::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 0;
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+/* Old school markers with pixel aesthetic */
+body.theme-oldschool .marker-pin svg {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+body.theme-oldschool .marker-label {
+  border: 1px solid var(--color-primary);
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+  text-shadow: 0 0 4px currentColor;
+}
+
+/* Bottom sheet with retro border */
+body.theme-oldschool .bottom-sheet {
+  border-radius: 0;
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+body.theme-oldschool .bottom-sheet-handle {
+  background: var(--color-primary);
+  border-radius: 0;
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+/* Badge with glow */
+body.theme-oldschool .nav-badge {
+  border-radius: 2px;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+/* ============================================
+   Accessibility & Keyboard Navigation
+   ============================================ */
+
+.theme-button:focus-visible,
+.theme-toggle-quick:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+  .theme-selector {
+    padding: 12px;
+  }
+
+  .theme-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .theme-button {
+    flex: 1;
+    min-width: calc(50% - 3px);
+  }
+
+  .theme-button .theme-name {
+    display: none;
+  }
+
+  .theme-button .theme-icon {
+    font-size: 20px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   Print Styles (Disable Theme Effects)
+   ============================================ */
+
+@media print {
+  .theme-selector {
+    display: none;
+  }
+
+  body.theme-oldschool::after {
+    display: none;
+  }
+}
