@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"C:\\\\tmp\\\\Claude Spielwiese\")",
+      "Bash(python:*)"
+    ]
+  }
+}
