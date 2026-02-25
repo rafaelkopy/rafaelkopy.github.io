@@ -65,6 +65,33 @@
       }
     },
 
+    notebook: {
+      name: 'Notizbuch',
+      icon: '📓',
+      properties: {
+        '--color-bg': '#f2ece0',
+        '--color-bg-light': '#faf6ee',
+        '--color-surface': '#faf6ee',
+        '--color-surface-hover': '#ede7d9',
+        '--color-primary': '#2a5298',
+        '--color-primary-dark': '#1e3d7a',
+        '--color-accent': '#3a6fd4',
+        '--color-danger': '#c0392b',
+        '--color-success': '#27ae60',
+        '--color-text': '#1a1008',
+        '--color-text-secondary': '#5a4a3a',
+        '--color-text-muted': '#9a8a7a',
+        '--color-border': '#c8b99a',
+        '--color-unread': '#2a5298',
+        '--color-marker': '#c0392b',
+        '--color-marker-done': '#27ae60',
+        '--shadow-sm': '0 1px 3px rgba(60, 40, 10, 0.1)',
+        '--shadow-md': '0 4px 12px rgba(60, 40, 10, 0.15)',
+        '--shadow-lg': '0 8px 30px rgba(60, 40, 10, 0.18)',
+        '--shadow-xl': '0 16px 50px rgba(60, 40, 10, 0.22)'
+      }
+    },
+
     oldschool: {
       name: 'Old School',
       icon: '🖥️',
