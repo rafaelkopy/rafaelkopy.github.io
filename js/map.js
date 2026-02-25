@@ -14,7 +14,26 @@
     '</svg>';
 
   window.EscapeRoom.initMap = function () {
-    // Map module ready — renderMap will be called when the map email is opened
+    // Wire up speech-bubble close controls once the DOM is ready
+    var closeBtn = document.getElementById('bubble-close');
+    var backdrop = document.getElementById('bubble-backdrop');
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMarkerBubble);
+    }
+    if (backdrop) {
+      backdrop.addEventListener('click', closeMarkerBubble);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeMarkerBubble();
+      }
+    });
+
+    // Close when the user scrolls (bubble is fixed, scrolling the map looks odd)
+    document.addEventListener('scroll', closeMarkerBubble, true);
   };
 
   /**
@@ -81,21 +100,30 @@
 
     el.addEventListener('click', function (e) {
       e.stopPropagation();
-      openBottomSheet(markerData);
+      var bubble = document.getElementById('marker-bubble');
+      // Toggle: clicking the same marker again closes the bubble
+      if (bubble && bubble.classList.contains('active') && bubble.dataset.markerId === String(markerData.id)) {
+        closeMarkerBubble();
+        return;
+      }
+      openMarkerBubble(markerData, el);
     });
 
     return el;
   }
 
   /**
-   * Open the bottom sheet modal for a marker
+   * Open a speech-bubble popup anchored to the clicked marker element.
+   * The bubble automatically flips above/below the marker depending on
+   * available viewport space, and the tail always points at the marker.
    */
-  function openBottomSheet(markerData) {
+  function openMarkerBubble(markerData, markerEl) {
     var state = ER.state;
     var isConfirmed = state.readMarkers.indexOf(markerData.id) !== -1;
 
-    var overlay = document.getElementById('bottom-sheet-overlay');
-    var content = document.getElementById('bottom-sheet-content');
+    var bubble = document.getElementById('marker-bubble');
+    var content = document.getElementById('bubble-content');
+    var backdrop = document.getElementById('bubble-backdrop');
 
     var btnText = isConfirmed ? 'Ort besucht' : 'Als besucht markieren';
 
@@ -106,33 +134,100 @@
       '<button class="btn-confirm" id="btn-sheet-confirm"' +
         (isConfirmed ? ' disabled' : '') + '>' + btnText + '</button>';
 
-    // Show overlay
-    overlay.classList.add('active');
+    // Tag the bubble with which marker it belongs to (for toggle detection)
+    bubble.dataset.markerId = String(markerData.id);
+
+    // Position bubble relative to the marker, respecting viewport edges
+    positionBubble(bubble, markerEl);
+
+    bubble.classList.add('active');
+    backdrop.classList.add('active');
 
     // Confirm button handler
     var confirmBtn = document.getElementById('btn-sheet-confirm');
     if (!isConfirmed) {
       confirmBtn.addEventListener('click', function () {
         confirmMarker(markerData.id);
-        closeBottomSheet();
+        closeMarkerBubble();
       });
     }
-
-    // Close on overlay tap (outside the sheet)
-    overlay.addEventListener('click', function handler(e) {
-      if (e.target === overlay) {
-        closeBottomSheet();
-        overlay.removeEventListener('click', handler);
-      }
-    });
   }
 
   /**
-   * Close the bottom sheet
+   * Close the speech bubble.
    */
-  function closeBottomSheet() {
-    var overlay = document.getElementById('bottom-sheet-overlay');
-    overlay.classList.remove('active');
+  function closeMarkerBubble() {
+    var bubble = document.getElementById('marker-bubble');
+    var backdrop = document.getElementById('bubble-backdrop');
+    if (bubble) {
+      bubble.classList.remove('active');
+      bubble.dataset.markerId = '';
+    }
+    if (backdrop) {
+      backdrop.classList.remove('active');
+    }
+  }
+
+  /**
+   * Calculate and apply the best position for the speech bubble relative to
+   * the given marker element.  The bubble prefers opening ABOVE the marker;
+   * if there is not enough room it opens BELOW.  It is then clamped
+   * horizontally so it never overflows the viewport.  Finally the tail arrow
+   * is shifted to still point at the marker's centre.
+   */
+  function positionBubble(bubble, markerEl) {
+    var TAIL_GAP = 10;      // px gap between bubble edge and marker
+    var MARGIN = 14;        // min distance from any viewport edge
+    var TAIL_HALF = 6;      // half of the 12 px tail element
+    var TAIL_CLAMP = 18;    // min distance of tail centre from bubble corners
+
+    var rect = markerEl.getBoundingClientRect();
+    // Horizontal anchor: centre of the marker pin
+    var anchorX = rect.left + rect.width / 2;
+
+    // Read bubble dimensions (content already set, opacity 0, still in layout)
+    var bw = bubble.offsetWidth;
+    var bh = bubble.offsetHeight;
+
+    // --- Vertical direction ---
+    var spaceAbove = rect.top - TAIL_GAP - MARGIN;
+    var spaceBelow = window.innerHeight - rect.bottom - TAIL_GAP - MARGIN;
+    // Prefer above; fall back to below; if neither fits pick the larger side
+    var openAbove = (spaceAbove >= bh) || (spaceAbove >= spaceBelow && spaceAbove >= bh * 0.5);
+
+    var bubbleTop;
+    if (openAbove) {
+      bubbleTop = rect.top - bh - TAIL_GAP;
+      bubble.className = 'marker-bubble tail-bottom';
+    } else {
+      bubbleTop = rect.bottom + TAIL_GAP;
+      bubble.className = 'marker-bubble tail-top';
+    }
+
+    // Clamp vertically so the bubble never goes off the top/bottom edge
+    bubbleTop = Math.max(MARGIN, Math.min(bubbleTop, window.innerHeight - bh - MARGIN));
+
+    // --- Horizontal position: centre on marker, then clamp ---
+    var bubbleLeft = anchorX - bw / 2;
+    bubbleLeft = Math.max(MARGIN, Math.min(bubbleLeft, window.innerWidth - bw - MARGIN));
+
+    // --- Tail position ---
+    // The tail's visual centre should align with anchorX
+    var tailCenterX = anchorX - bubbleLeft;
+    // Clamp so the tail never runs into the rounded corners
+    tailCenterX = Math.max(TAIL_CLAMP, Math.min(tailCenterX, bw - TAIL_CLAMP));
+
+    // --- Set transform-origin so the scale animation grows from the tail ---
+    var originY = openAbove ? bh : 0;
+    bubble.style.transformOrigin = tailCenterX + 'px ' + originY + 'px';
+
+    // Apply position
+    bubble.style.left = bubbleLeft + 'px';
+    bubble.style.top  = bubbleTop  + 'px';
+
+    // Move the tail element
+    var tailEl = bubble.querySelector('.bubble-tail');
+    tailEl.style.left = (tailCenterX - TAIL_HALF) + 'px';
   }
 
   /**

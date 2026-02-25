@@ -75,13 +75,14 @@
     </main>
   </div>
 
-  <!-- Bottom Sheet Modal (for map markers) -->
-  <div id="bottom-sheet-overlay" class="bottom-sheet-overlay">
-    <div id="bottom-sheet" class="bottom-sheet">
-      <div class="bottom-sheet-handle"></div>
-      <div id="bottom-sheet-content" class="bottom-sheet-content"></div>
-    </div>
+  <!-- Marker Speech Bubble -->
+  <div id="marker-bubble" class="marker-bubble">
+    <button class="bubble-close" id="bubble-close">&times;</button>
+    <div id="bubble-content" class="bubble-content"></div>
+    <div class="bubble-tail"></div>
   </div>
+  <!-- Transparent backdrop — captures outside-clicks to close bubble -->
+  <div id="bubble-backdrop" class="bubble-backdrop"></div>
 
   <!-- Audio for notification -->
   <audio id="notification-sound" preload="auto" src="assets/notification.wav"></audio>
