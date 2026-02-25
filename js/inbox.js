@@ -11,9 +11,10 @@
     var state = ER.state;
 
     // Populate account info
-    var accountName = config.inbox.accountName;
+    var accountSection = config.Einträge || config.inbox;
+    var accountName = accountSection.accountName;
     document.getElementById('account-name').textContent = accountName;
-    document.getElementById('account-email').textContent = config.inbox.accountEmail;
+    document.getElementById('account-email').textContent = accountSection.accountEmail;
     document.getElementById('account-avatar').textContent = accountName.charAt(0).toUpperCase();
 
     var emailListEl = document.getElementById('email-list');
@@ -70,13 +71,9 @@
         row.classList.add('unread');
       }
 
-      // Extract display name from "Name <email>" format
-      var displayFrom = extractDisplayName(email.from);
-
       row.innerHTML =
         '<div class="unread-dot"></div>' +
         '<div class="email-content">' +
-          '<div class="email-from">' + escapeHtml(displayFrom) + '</div>' +
           '<div class="email-subject">' + escapeHtml(email.subject) + '</div>' +
         '</div>' +
         '<div class="email-date">' + formatDate(email.date) + '</div>';
@@ -100,17 +97,10 @@
       }
 
       // Render detail view
-      var displayFrom = extractDisplayName(email.from);
-      var senderInitial = displayFrom.charAt(0).toUpperCase();
-
       var html =
         '<h1 class="detail-subject">' + escapeHtml(email.subject) + '</h1>' +
         '<div class="detail-meta">' +
-          '<div class="detail-avatar">' + senderInitial + '</div>' +
-          '<div>' +
-            '<div class="detail-from">' + escapeHtml(email.from) + '</div>' +
-            '<div class="detail-date">' + escapeHtml(email.date) + '</div>' +
-          '</div>' +
+          '<div class="detail-date">' + escapeHtml(email.date) + '</div>' +
         '</div>' +
         '<div class="detail-body">' + escapeHtml(email.body) + '</div>';
 
@@ -208,14 +198,6 @@
       renderEmailList();
     });
   };
-
-  /**
-   * Extract display name from "Name <email>" format
-   */
-  function extractDisplayName(fromStr) {
-    var match = fromStr.match(/^([^<]+)/);
-    return match ? match[1].trim() : fromStr;
-  }
 
   /**
    * Format date string for display in list

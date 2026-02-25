@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Secure Mail</title>
+  <title>Tagebuch</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/themes.css">
 </head>
@@ -26,7 +26,7 @@
           <input type="password" id="login-password" autocomplete="off">
         </div>
         <p id="login-error" class="error-message" hidden></p>
-        <button type="submit" class="btn-primary">Access System</button>
+        <button type="submit" class="btn-primary">Öffnen</button>
       </form>
     </div>
   </div>
@@ -36,13 +36,13 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div class="app-logo">&#9993;</div>
-        <span class="app-name">SecureMail</span>
+        <div class="app-logo">&#128218;</div>
+        <span class="app-name">Tagebuch</span>
       </div>
       <nav class="sidebar-nav">
         <a class="nav-item active" id="nav-inbox">
-          <span class="nav-icon">&#128229;</span>
-          Inbox
+          <span class="nav-icon">&#128221;</span>
+          Einträge
           <span class="nav-badge" id="unread-badge"></span>
         </a>
       </nav>
@@ -60,7 +60,7 @@
       <!-- Email List View -->
       <div id="email-list-view" class="view active">
         <div class="inbox-header">
-          <h2>Inbox</h2>
+          <h2>Einträge</h2>
         </div>
         <div id="email-list" class="email-list"></div>
       </div>
