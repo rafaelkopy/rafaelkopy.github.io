@@ -4,7 +4,13 @@
       "Bash(dir /s \"C:\\\\tmp\\\\Claude Spielwiese\")",
       "Bash(python:*)",
       "Bash(dir:*)",
-      "Bash(node --check:*)"
+      "Bash(node --check:*)",
+      "mcp__abap__search",
+      "mcp__abap__fetch",
+      "WebFetch(domain:software-heroes.com)",
+      "mcp__sap-docs__search",
+      "mcp__sap-docs__fetch",
+      "mcp__sap-docs__abap_feature_matrix"
     ]
   }
 }
