@@ -61,8 +61,8 @@
     var config = loadConfig();
     if (!config) {
       document.body.innerHTML = '<div style="padding:40px;color:#e63946;font-family:sans-serif;">' +
-        '<h2>Configuration Error</h2><p>Could not load configuration.</p>' +
-        '<p>Make sure <code>data/config.js</code> exists and contains valid data.</p></div>';
+        '<h2>Konfigurationsfehler</h2><p>Konfiguration konnte nicht geladen werden.</p>' +
+        '<p>Stelle sicher, dass <code>data/config.js</code> existiert und gültige Daten enthält.</p></div>';
       return;
     }
 

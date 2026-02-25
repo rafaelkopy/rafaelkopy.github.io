@@ -45,7 +45,7 @@ window.EscapeRoomConfig = {
         "id": "marker1",
         "x": 25,
         "y": 40,
-        "label": "Site Alpha",
+        "label": "Wohnhaus Friedrich Wilhelm Bergmann",
         "title": "Wohnhaus Friedrich Wilhelm Bergmann",
         "description": "In diesem Fachwerkhaus lebte und arbeitete Friedrich Wilhelm Bergmann um 1900. Werkstatt und Zuhause waren eins. Viele seiner Werkzeuge entstanden hier – lange bevor große Firmen Cronenberg prägten."
       },
@@ -53,7 +53,7 @@ window.EscapeRoomConfig = {
         "id": "marker2",
         "x": 60,
         "y": 30,
-        "label": "Site Beta",
+        "label": "Haus des Großvaters (Fundort Tagebuch)",
         "title": "Haus des Großvaters (Fundort Tagebuch)",
         "description": "Nach dem Tod des Großvaters wurde das Haus leer. Auf dem Dachboden fand Karl Justus die Tagebücher seines Ururgroßvaters. Dieser Fund brachte eine fast vergessene Geschichte wieder ans Licht."
       },
@@ -61,7 +61,7 @@ window.EscapeRoomConfig = {
         "id": "marker3",
         "x": 65,
         "y": 30,
-        "label": "Site Gamma",
+        "label": "Werkzeugkiste Ehrenmal",
         "title": "Werkzeugkiste Ehrenmal",
         "description": "Am 04.07.2026 wurde der Preis des Handwerks im Rahmen der Werkzeugkiste ausgestellt. Von hier aus begann die ungewöhnliche Geschichte rund um den verschwundenen Preis."
       },
@@ -69,7 +69,7 @@ window.EscapeRoomConfig = {
         "id": "marker4",
         "x": 10,
         "y": 20,
-        "label": "Site Delta",
+        "label": "Stadtteilbibliothek Cronenberg (Fundort)",
         "title": "Stadtteilbibliothek Cronenberg (Fundort)",
         "description": "In der Bibliothek suchte Karl Justus nach Informationen über den Preis des Handwerks. Er ließ den Preis für einen kurzen Moment aus den Augen. Diesen Moment habt ihr genutzt und den Preis an euch genommen."
       }

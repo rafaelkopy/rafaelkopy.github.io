@@ -33,7 +33,7 @@
     var progressHtml =
       '<div class="map-progress">' +
         '<span class="map-progress-text" id="map-progress-text">' +
-          readCount + '/' + totalMarkers + ' sites examined' +
+          readCount + '/' + totalMarkers + ' Orte besucht' +
         '</span>' +
         '<div class="map-progress-bar">' +
           '<div class="map-progress-fill" id="map-progress-fill" style="width:' +
@@ -44,8 +44,8 @@
     // Map container with image and markers
     var mapHtml =
       '<div class="map-container" id="map-container">' +
-        '<img src="' + escapeAttr(config.image) + '" alt="Mission Map" ' +
-          'onerror="this.style.display=\'none\';this.parentNode.insertAdjacentHTML(\'beforeend\',\'<div class=map-placeholder>Map image not found — place your map at ' + escapeAttr(config.image) + '</div>\')">' +
+        '<img src="' + escapeAttr(config.image) + '" alt="Karte" ' +
+          'onerror="this.style.display=\'none\';this.parentNode.insertAdjacentHTML(\'beforeend\',\'<div class=map-placeholder>Kartenbild nicht gefunden – lege deine Karte ab unter: ' + escapeAttr(config.image) + '</div>\')">' +
       '</div>';
 
     container.innerHTML = progressHtml + mapHtml;
@@ -97,7 +97,7 @@
     var overlay = document.getElementById('bottom-sheet-overlay');
     var content = document.getElementById('bottom-sheet-content');
 
-    var btnText = isConfirmed ? 'Site Examined' : 'Mark as Examined';
+    var btnText = isConfirmed ? 'Ort besucht' : 'Als besucht markieren';
 
     content.innerHTML =
       '<h3 class="sheet-title">' + escapeHtml(markerData.title) + '</h3>' +
@@ -160,7 +160,7 @@
     var progressFill = document.getElementById('map-progress-fill');
 
     if (progressText) {
-      progressText.textContent = readCount + '/' + totalMarkers + ' sites examined';
+      progressText.textContent = readCount + '/' + totalMarkers + ' Orte besucht';
     }
     if (progressFill) {
       progressFill.style.width = (readCount / totalMarkers * 100) + '%';
