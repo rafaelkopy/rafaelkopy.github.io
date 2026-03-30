@@ -422,6 +422,7 @@ input {
 
 .email-date {
   font-size: 15px;
+  font-weight: 700;
   color: var(--color-text-muted);
   flex-shrink: 0;
   white-space: nowrap;
@@ -880,6 +881,89 @@ input {
 .email-row {
   -webkit-user-select: none;
   user-select: none;
+}
+
+/* ============================================
+   Newspaper Popup
+   ============================================ */
+.newspaper-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.newspaper-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.newspaper-modal {
+  position: relative;
+  max-width: min(680px, 94vw);
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+}
+
+.newspaper-inner {
+  position: relative;
+  display: block;
+}
+
+.newspaper-image {
+  width: 100%;
+  display: block;
+}
+
+/* Text overlaid on the image placeholder area.
+   Adjust top/left/width/height to align with the blank box in the newspaper image. */
+.newspaper-text {
+  position: absolute;
+  top: 32%;
+  left: 6%;
+  width: 70%;
+  height: 30%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(10px, 1.8vw, 15px);
+  line-height: 1.55;
+  color: #1a1a1a;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.newspaper-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.newspaper-close:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* ============================================

@@ -45,6 +45,10 @@
           Einträge
           <span class="nav-badge" id="unread-badge"></span>
         </a>
+        <a class="nav-item" id="nav-newspaper" style="display:none;">
+          <span class="nav-icon">&#128240;</span>
+          Zeitungsseite
+        </a>
       </nav>
       <div class="sidebar-account">
         <div class="account-avatar" id="account-avatar"></div>
@@ -86,6 +90,17 @@
 
   <!-- Audio for notification -->
   <audio id="notification-sound" preload="auto" src="assets/notification.wav"></audio>
+
+  <!-- Newspaper Popup -->
+  <div id="newspaper-popup" class="newspaper-overlay">
+    <div class="newspaper-modal">
+      <button class="newspaper-close" id="newspaper-close">&times;</button>
+      <div class="newspaper-inner">
+        <img src="assets/Zeitungsseite mit leerem Bildplatzhalter.png" alt="Zeitungsseite" class="newspaper-image">
+        <div class="newspaper-text" id="newspaper-text"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Config (edit data/config.js to customize the game) -->
   <script src="data/config.js"></script>

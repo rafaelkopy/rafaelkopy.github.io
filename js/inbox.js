@@ -45,17 +45,7 @@
      * Get all emails that should be visible
      */
     function getVisibleEmails() {
-      var emails = config.emails.slice();
-
-      if (state.finalEmailDelivered) {
-        var finalEmail = Object.assign({}, config.finalEmail, {
-          id: 'final',
-          isMapEmail: false
-        });
-        emails.push(finalEmail);
-      }
-
-      return emails;
+      return config.emails.slice();
     }
 
     /**
@@ -165,7 +155,7 @@
     }
 
     /**
-     * Deliver the final email (called when all markers are read)
+     * Show newspaper popup (called when all markers are read)
      */
     ER.on('all-markers-read', function () {
       if (state.finalEmailDelivered) return;
@@ -179,19 +169,43 @@
         });
       }
 
-      // Re-render email list to include the final email
-      renderEmailList();
-
-      // Animate the new email row
-      var rows = emailListEl.querySelectorAll('.email-row');
-      var lastRow = rows[rows.length - 1];
-      if (lastRow) {
-        lastRow.classList.add('new-email');
+      // Show newspaper popup with final entry text
+      var popup = document.getElementById('newspaper-popup');
+      var textEl = document.getElementById('newspaper-text');
+      if (popup && textEl) {
+        textEl.textContent = config.finalEmail.body;
+        popup.classList.add('active');
       }
 
-      // If currently viewing the map email, also show a visual cue
-      // The user will see the new email when they go back to the list
+      // Reveal the sidebar link for revisiting the popup
+      if (navNewspaper) {
+        navNewspaper.style.display = '';
+      }
     });
+
+    // Newspaper popup close button and nav link
+    var newspaperClose = document.getElementById('newspaper-close');
+    var newspaperPopup = document.getElementById('newspaper-popup');
+    var navNewspaper = document.getElementById('nav-newspaper');
+
+    function openNewspaperPopup() {
+      if (newspaperPopup) newspaperPopup.classList.add('active');
+    }
+
+    if (newspaperClose && newspaperPopup) {
+      newspaperClose.addEventListener('click', function () {
+        newspaperPopup.classList.remove('active');
+      });
+      newspaperPopup.addEventListener('click', function (e) {
+        if (e.target === newspaperPopup) {
+          newspaperPopup.classList.remove('active');
+        }
+      });
+    }
+
+    if (navNewspaper) {
+      navNewspaper.addEventListener('click', openNewspaperPopup);
+    }
 
     // Initial render after login
     ER.on('login-success', function () {
@@ -204,11 +218,14 @@
                 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
   /**
-   * Format date string for display in list (time only)
+   * Format date string for display in list (date + time)
    */
   function formatDate(dateStr) {
     var parts = dateStr.split(' ');
-    return parts.length > 1 ? parts[1] : dateStr;
+    if (parts.length < 2) return dateStr;
+    var dateParts = parts[0].split('-');
+    var d = new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2]));
+    return d.getDate() + '. ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear() + ', ' + parts[1];
   }
 
   /**
