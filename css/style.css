@@ -927,18 +927,18 @@ input {
    Adjust top/left/width/height to align with the blank box in the newspaper image. */
 .newspaper-text {
   position: absolute;
-  top: 32%;
-  left: 6%;
-  width: 70%;
-  height: 30%;
+  top: 42%;
+  left: 18%;
+  width: 64%;
+  height: 15%;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: clamp(10px, 1.8vw, 15px);
-  line-height: 1.55;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px 6px;
+  font-family: 'Arial Narrow', 'Helvetica Neue Condensed', Arial, sans-serif;
+  font-size: clamp(7px, 1.1vw, 11px);
+  line-height: 1.4;
   color: #1a1a1a;
   white-space: pre-wrap;
   text-align: left;
