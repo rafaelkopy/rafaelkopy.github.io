@@ -100,7 +100,7 @@
       var html =
         '<h1 class="detail-subject">' + escapeHtml(email.subject) + '</h1>' +
         '<div class="detail-meta">' +
-          '<div class="detail-date">' + escapeHtml(email.date) + '</div>' +
+          '<div class="detail-date">' + formatDateLong(email.date) + '</div>' +
         '</div>' +
         '<div class="detail-body">' + escapeHtml(email.body) + '</div>';
 
@@ -199,13 +199,26 @@
     });
   };
 
+  var WEEKDAYS = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  var MONTHS = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+
   /**
-   * Format date string for display in list
+   * Format date string for display in list (time only)
    */
   function formatDate(dateStr) {
-    // Just show time portion for brevity in the list
     var parts = dateStr.split(' ');
     return parts.length > 1 ? parts[1] : dateStr;
+  }
+
+  /**
+   * Format date string as "Mittwoch, 1. Juli 2026"
+   */
+  function formatDateLong(dateStr) {
+    var parts = dateStr.split(' ');
+    var dateParts = parts[0].split('-');
+    var d = new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2]));
+    return WEEKDAYS[d.getDay()] + ', ' + d.getDate() + '. ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
   }
 
   /**

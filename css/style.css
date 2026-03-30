@@ -573,7 +573,7 @@ input {
   overflow: hidden;
   border: 1px solid var(--color-border);
   background: var(--color-bg-light);
-  width: 70%;
+  width: 100%;
 }
 
 .map-container img {
