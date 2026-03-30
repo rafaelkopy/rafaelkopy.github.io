@@ -33,7 +33,7 @@ window.EscapeRoomConfig = {
     {
       "id": "mission",
       "subject": "Der Plan",
-      "date": "2026-07-02 08:00",
+      "date": "2026-07-04 08:00",
       "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters. Und dann zum Friedhof. Anlässlich seines 100. Todestages möchte ich ihm auch einmal diesen Preis überreichen.\nDanach recherchiere ich kurz etwas in der Bibliothek, bevor ich ihn zurückbringe. Versprochen!\nWenn alles gut geht,\nwird der Preis am Ende wieder dort stehen,\nwo er hingehört.",
       "isMapEmail": true
     }
@@ -78,6 +78,6 @@ window.EscapeRoomConfig = {
   "finalEmail": {
     "subject": "Presseartikel WZ einen Tag später",
     "date": "2026-07-05 08:45",
-    "body": "Cronenberg - Am vergangenen Sonntag, dem 04.07.2026, sorgte das kurzzeitige Verschwinden des Preises des Handwerks für Aufregung auf dem Festgelände der Werkzeugkiste. Wie sich nun herausstellte, wurde der Preis nicht gestohlen, sondern von einem 12-jährigen Jungen vorübergehend an andere Orte in Cronenberg gebracht. Hintergrund war der Fund alter Tagebücher seines Ururgroßvaters, eines Handwerkers, der um 1900 in Cronenberg tätig war und knapp an der Auszeichnung vorbeigegangen war. Der Junge handelte laut Polizei weder aus Boshaftigkeit noch mit Bereicherungsabsicht. Der Preis wurde unversehrt zurückgebracht.\n„Es ging ihm darum, eine vergessene Geschichte sichtbar zu machen“, so ein Sprecher. Eine Anzeige wurde nicht erstattet. Stattdessen wurde die Aktion als Anlass genommen, über die Bedeutung von Handwerk und seine vielen stillen Vertreter zu sprechen.\nDer letzte Code lautet: 42349 Herzlichen Glückwunsch!"
+    "body": "Cronenberg - Am vergangenen Sonntag, dem 04.07.2026, sorgte das kurzzeitige Verschwinden des Preises des Handwerks für Aufregung auf dem Festgelände der Werkzeugkiste. Wie sich nun herausstellte, wurde der Preis nicht gestohlen, sondern von einem 12-jährigen Jungen vorübergehend an andere Orte in Cronenberg gebracht. Hintergrund war der Fund alter Tagebücher seines Ururgroßvaters, eines Handwerkers, der Anfang des 20. Jahrhunderts in Cronenberg tätig war und knapp an der Auszeichnung vorbeigegangen war. Der Junge handelte laut Polizei weder aus Boshaftigkeit noch mit Bereicherungsabsicht. Der Preis wurde unversehrt zurückgebracht.\n„Es ging ihm darum, eine vergessene Geschichte sichtbar zu machen“, so ein Sprecher. Eine Anzeige wurde nicht erstattet. Stattdessen wurde die Aktion als Anlass genommen, über die Bedeutung von Handwerk und seine vielen stillen Vertreter zu sprechen.\nDer letzte Code lautet: 42349 Herzlichen Glückwunsch!"
   }
 };
