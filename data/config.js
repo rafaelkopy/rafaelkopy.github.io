@@ -6,7 +6,7 @@
 window.EscapeRoomConfig = {
   "login": {
     "username": "FWB",
-    "password": "1925",
+    "password": "1926",
     "title": "Geheimes Tagebuch Karl Justus Bergmann",
     "subtitle": "Nur wer seinen Ur-Opa schätzt, kommt hier weiter",
     "errorMessage": "Falsche Zugangsdaten, versuche es erneut."

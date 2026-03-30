@@ -134,20 +134,20 @@ input {
 }
 
 .login-icon {
-  font-size: 48px;
+  font-size: 60px;
   margin-bottom: 16px;
   filter: grayscale(0.3);
 }
 
 .login-card h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--color-text);
 }
 
 .login-card p {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--color-text-secondary);
   margin-bottom: 32px;
 }
@@ -159,7 +159,7 @@ input {
 
 .input-group label {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -174,7 +174,7 @@ input {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-text);
-  font-size: 16px;
+  font-size: 20px;
   transition: border-color var(--transition-fast);
 }
 
@@ -194,7 +194,7 @@ input {
   padding: 14px;
   background: var(--color-primary);
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   border-radius: var(--radius-md);
   transition: background var(--transition-fast), transform var(--transition-fast);
@@ -246,11 +246,11 @@ input {
 }
 
 .app-logo {
-  font-size: 28px;
+  font-size: 35px;
 }
 
 .app-name {
-  font-size: 18px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--color-primary);
 }
@@ -268,7 +268,7 @@ input {
   border-radius: var(--radius-md);
   color: var(--color-text);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   transition: background var(--transition-fast);
@@ -279,14 +279,14 @@ input {
 }
 
 .nav-icon {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .nav-badge {
   margin-left: auto;
   background: var(--color-primary);
   color: #fff;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 10px;
@@ -315,17 +315,17 @@ input {
   justify-content: center;
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   flex-shrink: 0;
 }
 
 .account-name {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .account-email {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--color-text-secondary);
 }
 
@@ -347,7 +347,7 @@ input {
 }
 
 .inbox-header h2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -404,7 +404,7 @@ input {
 }
 
 .email-from {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--color-text-secondary);
   margin-bottom: 2px;
   white-space: nowrap;
@@ -413,7 +413,7 @@ input {
 }
 
 .email-subject {
-  font-size: 15px;
+  font-size: 19px;
   color: var(--color-text-secondary);
   white-space: nowrap;
   overflow: hidden;
@@ -421,7 +421,7 @@ input {
 }
 
 .email-date {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text-muted);
   flex-shrink: 0;
   white-space: nowrap;
@@ -462,7 +462,7 @@ input {
 .btn-back {
   background: var(--color-surface);
   color: var(--color-primary);
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 600;
   padding: 10px 20px;
   border-radius: var(--radius-md);
@@ -484,7 +484,7 @@ input {
 }
 
 .detail-subject {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.3;
@@ -507,23 +507,23 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 23px;
   flex-shrink: 0;
   border: 1px solid var(--color-border);
 }
 
 .detail-from {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .detail-date {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text-secondary);
 }
 
 .detail-body {
-  font-size: 15px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--color-text);
   white-space: pre-wrap;
@@ -547,7 +547,7 @@ input {
 }
 
 .map-progress-text {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--color-text-secondary);
 }
@@ -573,6 +573,7 @@ input {
   overflow: hidden;
   border: 1px solid var(--color-border);
   background: var(--color-bg-light);
+  width: 70%;
 }
 
 .map-container img {
@@ -618,7 +619,7 @@ input {
 }
 
 .marker-label {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   background: rgba(0, 0, 0, 0.75);
   color: #fff;
@@ -667,7 +668,7 @@ input {
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   font-weight: 700;
   z-index: 3;
@@ -749,7 +750,7 @@ input {
   right: 10px;
   background: none;
   color: var(--color-text-muted);
-  font-size: 18px;
+  font-size: 23px;
   line-height: 1;
   width: 26px;
   height: 26px;
@@ -768,7 +769,7 @@ input {
 
 /* ---- Bubble content ---- */
 .sheet-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 4px;
   padding-right: 24px; /* don't overlap the close button */
@@ -776,14 +777,14 @@ input {
 }
 
 .sheet-label {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-primary);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .sheet-description {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--color-text-secondary);
   margin-bottom: 16px;
@@ -794,7 +795,7 @@ input {
   padding: 12px;
   background: var(--color-primary);
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   border-radius: var(--radius-md);
   transition: background var(--transition-fast), transform var(--transition-fast);
@@ -892,5 +893,5 @@ input {
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
-  font-size: 14px;
+  font-size: 18px;
 }
