@@ -173,7 +173,7 @@
       var popup = document.getElementById('newspaper-popup');
       var textEl = document.getElementById('newspaper-text');
       if (popup && textEl) {
-        textEl.textContent = config.finalEmail.body;
+        textEl.textContent = config.news_story.body;
         popup.classList.add('active');
       }
 

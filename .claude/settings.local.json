@@ -10,7 +10,8 @@
       "WebFetch(domain:software-heroes.com)",
       "mcp__sap-docs__search",
       "mcp__sap-docs__fetch",
-      "mcp__sap-docs__abap_feature_matrix"
+      "mcp__sap-docs__abap_feature_matrix",
+      "Bash(python3 -c \":*)"
     ]
   }
 }

@@ -8,7 +8,7 @@ window.EscapeRoomConfig = {
     "username": "FWB",
     "password": "1926",
     "title": "Geheimes Tagebuch Karl Justus Bergmann",
-    "subtitle": "Nur wer seinen Ur-Opa schätzt, kommt hier weiter",
+    "subtitle": "Nur wer seinen Ur-Ur-Opa schätzt, kommt hier weiter",
     "errorMessage": "Falsche Zugangsdaten, versuche es erneut."
   },
   "Einträge": {
@@ -75,9 +75,9 @@ window.EscapeRoomConfig = {
       }
     ]
   },
-  "finalEmail": {
+  "news_story": {
     "subject": "Presseartikel WZ einen Tag später",
     "date": "2026-07-05 08:45",
-    "body": "Cronenberg - Am vergangenen Sonntag, dem 04.07.2026, sorgte das kurzzeitige Verschwinden des Preises des Handwerks für Aufregung auf dem Festgelände der Werkzeugkiste. Wie sich nun herausstellte, wurde der Preis nicht gestohlen, sondern von einem 12-jährigen Jungen vorübergehend an andere Orte in Cronenberg gebracht. Hintergrund war der Fund alter Tagebücher seines Ururgroßvaters, eines Handwerkers, der Anfang des 20. Jahrhunderts in Cronenberg tätig war und knapp an der Auszeichnung vorbeigegangen war. Der Junge handelte laut Polizei weder aus Boshaftigkeit noch mit Bereicherungsabsicht. Der Preis wurde unversehrt zurückgebracht.\n„Es ging ihm darum, eine vergessene Geschichte sichtbar zu machen“, so ein Sprecher. Eine Anzeige wurde nicht erstattet. Stattdessen wurde die Aktion als Anlass genommen, über die Bedeutung von Handwerk und seine vielen stillen Vertreter zu sprechen.\nDer letzte Code lautet: 42349 Herzlichen Glückwunsch!"
+    "body": "Cronenberg - Am vergangenen Samstag, den 04.07.2026, sorgte das kurzzeitige Verschwinden des Preises des Handwerks für Aufregung auf dem Festgelände der Werkzeugkiste. Wie sich nun herausstellte, wurde der Preis nicht gestohlen, sondern von einem 12-jährigen Jungen vorübergehend an andere Orte in Cronenberg gebracht. Hintergrund war der Fund alter Tagebücher seines Ururgroßvaters, eines Handwerkers, der Anfang des 20. Jahrhunderts in Cronenberg tätig war und knapp an der Auszeichnung vorbeigegangen war. Der Junge handelte laut Polizei weder aus Boshaftigkeit noch mit Bereicherungsabsicht. Der Preis wurde unversehrt zurückgebracht.\n\u201eEs ging ihm darum, eine vergessene Geschichte sichtbar zu machen\u201c, so ein Sprecher. Eine Anzeige wurde nicht erstattet. Stattdessen wurde die Aktion als Anlass genommen, über die Bedeutung von Handwerk und seine vielen stillen Vertreter zu sprechen.\nAn dem Preis wurde ein Zettel mit einer Zahlenfolge gefunden, welche sich die Polizei bisher nicht erklären konnte, 0407. Die Polizei bittet darum, sachdienliche Hinweise an die nächste Polizeidienststelle zu melden oder das Rätsel selbst zu lösen ;)"
   }
 };

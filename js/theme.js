@@ -4,8 +4,11 @@
 (function () {
   'use strict';
 
+  // Set to true to show all theme options in the sidebar; false = notebook only
+  var SHOW_ALL_THEMES = false;
+
   var THEME_KEY = 'escaperoomTheme';
-  var currentTheme = 'darkmode';
+  var currentTheme = 'notebook';
 
   /**
    * Theme definitions with all CSS custom property values
@@ -168,6 +171,7 @@
    * Load saved theme from localStorage
    */
   function loadSavedTheme() {
+    if (!SHOW_ALL_THEMES) return 'notebook';
     try {
       var saved = localStorage.getItem(THEME_KEY);
       if (saved && themes[saved]) {
@@ -176,7 +180,7 @@
     } catch (e) {
       // Ignore localStorage errors
     }
-    return 'darkmode';
+    return 'notebook';
   }
 
   /**
@@ -232,6 +236,7 @@
    * Create theme selector UI
    */
   function createThemeSelector() {
+    if (!SHOW_ALL_THEMES) return;
     var sidebar = document.querySelector('.sidebar-nav');
     if (!sidebar) return;
 
