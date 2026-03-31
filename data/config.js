@@ -34,7 +34,7 @@ window.EscapeRoomConfig = {
       "id": "mission",
       "subject": "Der Plan",
       "date": "2026-07-04 08:00",
-      "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters. Und dann zum Friedhof. Anlässlich seines 100. Todestages möchte ich ihm auch einmal diesen Preis überreichen.\nIm Anschluss gehe ich kurz in die Bibliothek, um etwas zu recherchieren, bevor ich den Preis dann zum Friedhof bringe. Anlässlich Ur-Ur-Opas 100. Todestages, möchte ich ihm auch einmal diesen Preis überreichen. Danach bringe ich den Preis auch zurück zur Werkzeugkiste, versprochen!\nWenn alles gut geht, wird der Preis am Ende wieder dort stehen, wo er hingehört.",
+      "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters.\nIm Anschluss gehe ich kurz in die Bibliothek, um etwas zu recherchieren, bevor ich den Preis dann zum Friedhof bringe. Anlässlich Ururopas 100. Todestages, möchte ich ihm auch einmal diesen Preis überreichen. Danach bringe ich ihn auch zurück zur Werkzeugkiste, versprochen!\nWenn alles gut geht, wird der Preis am Ende wieder dort stehen, wo er hingehört.",
       "isMapEmail": true
     }
   ],
