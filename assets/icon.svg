@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0f1923" rx="80"/>
+  <!-- Book spine -->
+  <rect x="110" y="96" width="56" height="320" rx="8" fill="#4a6fa5"/>
+  <!-- Book cover -->
+  <rect x="110" y="96" width="292" height="320" rx="8" fill="#2a4a7a"/>
+  <!-- Book spine highlight -->
+  <rect x="110" y="96" width="56" height="320" rx="8" fill="#3a5a95"/>
+  <!-- Lock body -->
+  <rect x="210" y="230" width="92" height="76" rx="10" fill="#c9a84c"/>
+  <!-- Lock shackle -->
+  <path d="M230 230 v-28 a26 26 0 0 1 52 0 v28" stroke="#c9a84c" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <!-- Lock keyhole -->
+  <circle cx="256" cy="268" r="10" fill="#0f1923"/>
+  <rect x="251" y="268" width="10" height="20" rx="2" fill="#0f1923"/>
+</svg>
