@@ -169,11 +169,9 @@
         });
       }
 
-      // Show newspaper popup with final entry text
+      // Show newspaper popup
       var popup = document.getElementById('newspaper-popup');
-      var textEl = document.getElementById('newspaper-text');
-      if (popup && textEl) {
-        textEl.textContent = config.news_story.body;
+      if (popup) {
         popup.classList.add('active');
       }
 

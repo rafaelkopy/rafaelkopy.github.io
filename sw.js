@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tagebuch-v1';
+const CACHE_NAME = 'tagebuch-v2';
 
 const ASSETS = [
   './',
@@ -18,7 +18,7 @@ const ASSETS = [
   './assets/cronenberg_map.jpeg',
   './assets/Zeitungsseite.png',
   './assets/Preis_des_Handrks.jpeg',
-  './assets/Zeitungsseite mit leerem Bildplatzhalter.png',
+  './assets/Zeitungsseite_final.png',
 ];
 
 self.addEventListener('install', event => {
