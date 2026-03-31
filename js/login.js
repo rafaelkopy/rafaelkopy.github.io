@@ -23,7 +23,7 @@
       var username = usernameInput.value.trim();
       var password = passwordInput.value;
 
-      if (username === config.username && password === config.password) {
+      if (username.toLowerCase() === config.username.toLowerCase() && password === config.password) {
         // Success
         errorEl.hidden = true;
         window.EscapeRoom.state.loggedIn = true;

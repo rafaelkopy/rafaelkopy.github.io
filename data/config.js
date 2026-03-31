@@ -27,14 +27,14 @@ window.EscapeRoomConfig = {
       "id": "filler2",
       "subject": "In Erinnerung",
       "date": "2026-07-01 14:15",
-      "body": "Ich habe die Notizen jetzt mehrmals gelesen. Er schreibt, dass er knapp verloren hat. Dass sein Handwerk gut war – aber nicht gut genug für den Preis. Er war nicht wütend. Nur traurig.\nAm meisten berührte mich, dass er nur ein Jahr später verstorben ist und nie mehr die Chance bekam, den Preis zu gewinnen.\nNiemand kennt meinen Ururgroßvater. Ich habe mich gefragt:\nWas, wenn der Preis einmal zu ihm zurückkehrt?\nNicht für immer.\nNur für einen Moment. Vielleicht, damit jemand seine Geschichte hört.",
+      "body": "Ich habe die Notizen jetzt mehrmals gelesen. Er schreibt, dass er knapp verloren hat. Dass sein Handwerk gut war – aber nicht gut genug für den Preis. Er war nicht wütend. Nur traurig.\nAm meisten berührte mich, dass er nur ein Monat später verstorben ist und nie mehr die Chance bekam, den Preis zu gewinnen.\nNiemand kennt meinen Ururgroßvater. Ich habe mich gefragt:\nWas, wenn der Preis einmal zu ihm zurückkehrt?\nNicht für immer.\nNur für einen Moment. Vielleicht, damit jemand seine Geschichte hört.",
       "isMapEmail": false
     },
     {
       "id": "mission",
       "subject": "Der Plan",
       "date": "2026-07-04 08:00",
-      "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters. Und dann zum Friedhof. Anlässlich seines 100. Todestages möchte ich ihm auch einmal diesen Preis überreichen.\nDanach recherchiere ich kurz etwas in der Bibliothek, bevor ich ihn zurückbringe. Versprochen!\nWenn alles gut geht,\nwird der Preis am Ende wieder dort stehen,\nwo er hingehört.",
+      "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters. Und dann zum Friedhof. Anlässlich seines 100. Todestages möchte ich ihm auch einmal diesen Preis überreichen.\nIm Anschluss gehe ich kurz in die Bibliothek, um etwas zu recherchieren, bevor ich den Preis dann zum Friedhof bringe. Anlässlich Ur-Ur-Opas 100. Todestages, möchte ich ihm auch einmal diesen Preis überreichen. Danach bringe ich den Preis auch zurück zur Werkzeugkiste, versprochen!\nWenn alles gut geht, wird der Preis am Ende wieder dort stehen, wo er hingehört.",
       "isMapEmail": true
     }
   ],

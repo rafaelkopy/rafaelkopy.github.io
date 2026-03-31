@@ -95,8 +95,7 @@
     el.innerHTML =
       '<div class="marker-pulse"></div>' +
       '<div class="marker-pin">' + PIN_SVG + '</div>' +
-      '<span class="marker-check">\u2713</span>' +
-      '<span class="marker-label">' + escapeHtml(markerData.label) + '</span>';
+      '<span class="marker-check">\u2713</span>';
 
     el.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -129,7 +128,6 @@
 
     content.innerHTML =
       '<h3 class="sheet-title">' + escapeHtml(markerData.title) + '</h3>' +
-      '<div class="sheet-label">' + escapeHtml(markerData.label) + '</div>' +
       '<p class="sheet-description">' + escapeHtml(markerData.description) + '</p>' +
       '<button class="btn-confirm" id="btn-sheet-confirm"' +
         (isConfirmed ? ' disabled' : '') + '>' + btnText + '</button>';
