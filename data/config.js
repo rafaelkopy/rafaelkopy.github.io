@@ -20,21 +20,21 @@ window.EscapeRoomConfig = {
       "id": "filler1",
       "subject": "Der Fund",
       "date": "2026-06-29 09:30",
-      "body": "Heute waren wir wieder im alten Haus von Opa. Es steht schon lange leer, seit er gestorben ist. Mama sagt immer, man müsse sich von Dingen trennen, aber dieses Haus fühlt sich an, als würde es noch atmen. Ich war auf dem Dachboden. Es roch nach Holz und Staub. Zwischen alten Werkzeugkisten und einem kaputten Stuhl habe ich eine kleine Holzkiste gefunden. Darin lagen vergilbte Seiten. Handschrift.\nOben stand ein Name: Friedrich Wilhelm Bergmann. Mein Ururgroßvater. Ich wusste gar nicht, dass er Tagebuch geführt hat. In seinen Worten ging es um Arbeit, Zweifel und um einen Preis, den er nie bekommen hat. Ich habe mich lange auf den Boden gesetzt und gelesen. Irgendwie war es, als würde er endlich jemandem seine Geschichte erzählen.",
+      "body": "Im alten, leerstehenden Haus meines Opas habe ich auf dem Dachboden eine kleine Holzkiste entdeckt.\nDarin: vergilbte Seiten, handgeschrieben.\nDer Name darauf: Friedrich Wilhelm Bergmann – mein Ururgroßvater.\nEr schrieb über Arbeit, Zweifel\nund einen Preis, den er nie bekommen hat.\nBeim Lesen fühlte es sich an,\nals würde er endlich gehört.",
       "isMapEmail": false
     },
     {
       "id": "filler2",
       "subject": "In Erinnerung",
       "date": "2026-07-01 14:15",
-      "body": "Ich habe die Notizen jetzt mehrmals gelesen. Er schreibt, dass er knapp verloren hat. Dass sein Handwerk gut war – aber nicht gut genug für den Preis. Er war nicht wütend. Nur traurig.\nAm meisten berührte mich, dass er nur ein Monat später verstorben ist und nie mehr die Chance bekam, den Preis zu gewinnen.\nNiemand kennt meinen Ururgroßvater. Ich habe mich gefragt:\nWas, wenn der Preis einmal zu ihm zurückkehrt?\nNicht für immer.\nNur für einen Moment. Vielleicht, damit jemand seine Geschichte hört.",
+      "body": "Ich habe seine Worte immer wieder gelesen.\nEr verlor den Preis nur knapp.\nEin Satz blieb mir im Kopf:\n\u201eVielleicht war meine Arbeit richtig, aber zur falschen Zeit.\u201c\nHeute kennt niemand mehr seinen Namen.\nDer Preis wird gefeiert \u2013\nseine Geschichte nicht.",
       "isMapEmail": false
     },
     {
       "id": "mission",
       "subject": "Der Plan",
       "date": "2026-07-04 08:00",
-      "body": "Heute ist der Tag. Die Werkzeugkiste ist voll. Viele Menschen. Viel Lärm. Der Preis steht direkt hinter der großen Bühne am Ehrenmal. Ich weiß, dass ich nichts kaputt machen will. Ich will niemandem schaden. Ich habe mir einen Plan gemacht:\nIch bringe den Preis zuerst zum alten Haus meines Ururgroßvaters.\nIm Anschluss gehe ich kurz in die Bibliothek, um etwas zu recherchieren, bevor ich den Preis dann zum Friedhof bringe. Anlässlich Ururopas 100. Todestages, möchte ich ihm auch einmal diesen Preis überreichen. Danach bringe ich ihn auch zurück zur Werkzeugkiste, versprochen!\nWenn alles gut geht, wird der Preis am Ende wieder dort stehen, wo er hingehört.",
+      "body": "Der Preis steht glänzend in der Vitrine.\nIch will ihn nicht stehlen.\nIch will nur an meinen Ururopa erinnern.\nIch bringe ihn an drei Orte:\nzum alten Haus, zur Bibliothek,\nzum Friedhof und dann zurück.\nDer Preis soll bleiben.\nAber mit einer Geschichte mehr.",
       "isMapEmail": true
     }
   ],
